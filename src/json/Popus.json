@@ -1,0 +1,42 @@
+{
+  "Data": [
+    {
+      "heading": "Category"
+    },
+    {
+        "text": "Coporate Shoes"
+    },
+    {
+        "text": "Sneakers"
+    },
+    {
+        "text": "Sandals"
+    },
+    {
+        "text": "Sport Shoe"
+    },
+    {
+        "text": "Trainers"
+    }
+  ],
+  "Data1": [
+    {
+      "heading": "Category"
+    },
+    {
+        "text": "HOT DEAL"
+    },
+    {
+        "text": "Sunglasses"
+    },
+    {
+        "text": "Belts"
+    },
+    {
+        "text": "Handbags"
+    },
+    {
+        "text": "Sneakers"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "hotdeal": [
+    { "heading": "Hot Deals" },
+    {
+      "text": "Nike",
+      "count": "2"
+    },
+    {
+      "text": "Airmax",
+      "count": "48"
+    },
+    {
+      "text": "Nike",
+      "count": "14"
+    },
+    {
+      "text": "Adidas",
+      "count": "15"
+    },
+    {
+      "text": "Vans",
+      "count": "23"
+    },
+    {
+      "text": "All Stars",
+      "count": "1"
+    },
+    {
+      "text": "Adidas",
+      "count": "95"
+    }
+  ],
+  "Colors": [
+    { "heading": "COLOR" },
+
+    {
+      "Color": "#006CFF"
+    },
+    {
+      "Color": "#FC3E39"
+    },
+    {
+      "Color": "#171717"
+    },
+    {
+      "Color": "#FFF600"
+    },
+    {
+      "Color": "#FF00B4"
+    },
+    {
+      "Color": "#EFDFDF"
+    }
+  ]
+}

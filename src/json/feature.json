@@ -1,0 +1,26 @@
+[
+    {
+        "image":"Vector.png",
+        "title":"Blue Swade Nike Sneakers",
+        "star":"star.svg",
+        "lightStar":"star1.svg",
+        "price":"$499",
+        "delete":"$599"
+    },
+    {
+        "image":"Vector.png",
+        "title":"Blue Swade Nike Sneakers",
+        "star":"star.svg",
+        "lightStar":"star1.svg",
+        "price":"$499",
+        "delete":"$599"
+    },
+    {
+        "image":"Vector.png",
+        "title":"Blue Swade Nike Sneakers",
+        "star":"star.svg",
+        "lightStar":"star1.svg",
+        "price":"$499",
+        "delete":"$599"
+    }
+]

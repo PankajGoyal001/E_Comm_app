@@ -1,0 +1,162 @@
+{
+  "Heading": [
+    {
+        "menu":"All",
+        "path":"/all"
+    },
+    {
+        "menu":"Bags",
+        "path":"/bags"
+    },
+    {
+        "menu":"Sneakers",
+        "path":"/sneakers"
+    },
+    {
+        "menu":"Belt",
+        "path":"/belt"
+    },
+    {
+        "menu":"Sunglasses",
+        "path":"/sungasses"
+    }
+  ],
+  "Section": [
+    {
+      "image": "bestseller1.png",
+      "hot": "HOT",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller2.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller3.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller4.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller5.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller6.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller7.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller8.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    }
+  ],
+  "Section1": [
+    {
+      "image": "bestseller1.png",
+      "hot": "HOT",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller2.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller3.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    },
+    {
+      "image": "bestseller4.png",
+      "title": "Nike Air Max 270 React",
+      "star": "star.svg",
+      "lightStar": "star1.svg",
+      "price": "$299,43",
+      "deletedata": "$534,33",
+      "offer": "24% Off",
+      "heart":"heart.svg",
+      "shop":"shop.svg"
+    }
+  ]
+}
