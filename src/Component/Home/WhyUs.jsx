@@ -7,7 +7,7 @@ import support from "../../assets/svg/support.svg";
 const WhyUs = () => {
   return (
     <>
-    <div className="pt-[49px] pb-[60px]">
+    <div className="pt-[49px] hidden     md:block pb-[60px]">
         <div className="container">
             <div className="flex max-w-[1091px] justify-self-center w-full text-center justify-between items-center ">
                 <div className="flex flex-col gap-3 max-w-[198px] w-full justify-center">
@@ -34,7 +34,6 @@ const WhyUs = () => {
                     <p className="text-lg leading-[100%] font-normal text-primary-dark text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
-
         </div>
     </div>
     </>

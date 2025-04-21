@@ -12,7 +12,7 @@ const AdidasShoes = ({ titleText, detailText, shopText, imageText, title, detail
                         <button className={`border-b-[3px] pb-1 border-[#fff] text-xl font-semibold font-poppins hover:cursor-pointer text-[#fff] ${shopText} `}>{shop}</button>
                     </Link>
                 </div>
-                <img className={`absolute right-[-120px] top-[-95px] ${imageText}`} src={`src/assets/Images/${images}`} alt="shoes" />
+                <img className={`absolute right-[-120px]  top-[-95px] ${imageText}`} src={`src/assets/Images/${images}`} alt="shoes" />
             </div>
         </>
     )

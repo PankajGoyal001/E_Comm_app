@@ -7,11 +7,11 @@ import SellerCard from '../Cards/SellerCard';
 const BestSeller = ({ data, VARIENT, Title }) => {
     return (
         <>
-            <div className=" pb-[45px]">
+            <div className="py-3 md:py-[45px]">
                 <div className="container">
                     <div className="flex flex-col gap-6">
-                        <div className="flex flex-col gap-[26px] items-center">
-                            <h2 className='text-[35px] leading-[100%] tracking-normal font-poppins font-semibold text-primary-dark'>{Title}</h2>
+                        <div className="sm:flex hidden flex-col gap-[26px] items-center">
+                            <h2 className='text-[35px]  leading-[100%] tracking-normal font-poppins font-semibold text-primary-dark'>{Title}</h2>
                             {
                                 VARIENT === true && (<>
                                     <ul className="max-w-[627px] w-full flex justify-between ">
@@ -26,7 +26,7 @@ const BestSeller = ({ data, VARIENT, Title }) => {
                                 </>) 
                             }
                         </div>
-                        <div className="grid grid-cols-4 gap-[20px]">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-[20px]">
                             {
                                 data.map((item, index) => (
                                     <SellerCard key={index}
@@ -45,7 +45,7 @@ const BestSeller = ({ data, VARIENT, Title }) => {
                             }
                         </div>
                         {
-                            VARIENT === true ? (<><div className='text-center '>
+                            VARIENT === true ? (<><div className='text-center hidden sm:block '>
                                 <button className=" text-xl  cursor-pointer leading-[100%] text-skyblue font-poppins  border-b-[3px] border-b-skyblue">LOAD MORE</button></div>
                             </>)
                                 : ""

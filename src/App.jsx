@@ -34,7 +34,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/hotdeals' element={<Hotdeals />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
 
 

@@ -77,11 +77,26 @@ const Header = () => {
           {/* sidebar ...... */}
           {
             (<>
-              <div className="grid gap-5">
-                <div className={`flex gap-1.5 md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-10  opacity-100" : " w-0 -z-50 opacity-0"} items-center `}>
-                  <img src={logo} alt="logo" />
-                  <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-white'>E-Comm</h6>
+              <div className={`flex gap-1.5 md:hidden md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-10 translate-0 delay-500  " : " w-0 -z-50 translate-x-[100px] "} items-center`}>
+                <img src={logo} alt="logo" />
+                <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-white'>E-Comm</h6>
+              </div>
+              <div className={`flex flex-col gap-5 absolute top-20 z-10 transition-all duration-500  ${Click1 ? "translate delay-300 opacity-100 " : "translate-x-[50px] opacity-0"}`}>
+                <div className="flex gap-[10px]">
+                  <img className='w-7' src="src/assets/svg/search.svg" alt="search" />
+                  <p className="text-xl font-poppins font-semibold ">Search</p>
                 </div>
+                <ul className={`flex flex-col gap-5`}>
+                  {Click1 &&
+                    menuData.map((item, index) => (
+                      <NavLink onClick={()=> setClick1(false)} key={index} to={item.path}>
+                        <button onMouseMove={() => setClick(index)} onMouseOut={() => setClick()}>
+                          <li className="text-xl font-medium font-poppins tracking-normal hover:cursor-pointer">{item.menu}</li>
+                        </button>
+                      </NavLink>
+                    ))
+                  }
+                </ul>
               </div>
               <div className={`max-h-1vh md:hidden h-full ${Click1 ? "w-full" : "w-0"} transition-all duration-700 top-0 right-0 absolute bg-gray-400  `}></div>
             </>)

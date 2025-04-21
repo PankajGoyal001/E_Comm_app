@@ -13,9 +13,9 @@ import ShapeVisa from "../../assets/svg/ShapeVisa.svg";
 const Footer = () => {
   return (
     <>
-      <div className="pt-[150px] pb-[54px] bg-light-blue">
+      <div className="lg:pt-[150px] md:pt-[100px] pt-16 md:pb-[54px] pb-5 bg-light-blue">
         <div className="container">
-          <div className="flex justify-between ">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-[50px] justify-between">
 
             <div className="flex max-w-[221px] w-full flex-col gap-4">
               <div className="flex gap-[7px] items-center ">
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex justify-between mt-[70px] items-center ">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-10 md:mt-[70px] mt-10 items-center ">
             {
               footerData.map((item,index)=>(
                 <div key={index} className="flex flex-col gap-[19px]">
@@ -57,7 +57,7 @@ const Footer = () => {
             }
           </div>
 
-          <div className="flex justify-between pt-[30px] border-t border-[#F6F7F8] items-center mt-16">
+          <div className="md:flex-row flex flex-col-reverse gap-[10px] justify-between pt-[30px] border-t border-[#F6F7F8] items-center mt-8 md:mt-16">
             <h6 className='text-sm leading-[100% font-normal font-proxima] text-light-gray'>© 2018 Ecommerce theme by www.bisenbaev.com</h6>
             <div className="max-w-[212px] w-full flex gap-5">
               <img src={WesternCard} alt="WesternCard" />

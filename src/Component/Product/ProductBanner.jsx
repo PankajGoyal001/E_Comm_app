@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ProductImg from "../../assets/Images/ProductImg.png";
 import star from "../../assets/svg/star.svg";
@@ -13,7 +13,14 @@ import heart_2 from "../../assets/svg/heart_2.svg";
 import facebook_2 from "../../assets/svg/facebook_2.svg";
 import twitter_2 from "../../assets/svg/twitter_2.svg";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
+
 const ProductBanner = () => {
+  const swiperRef = useRef();
     const [count, setcount] = useState(1)
     const [selectColor, setselectColor] = useState(false)
     const color = ["#006CFF", "#FC3E39", "#171717", "#FFF600"]
@@ -152,26 +159,65 @@ const ProductBanner = () => {
                     </div>
 
                     {/* best seller ...... */}
-                    <div className="flex flex-col max-w-[287px] w-full gap-[35px]">
-                        <h6 className="text-lg font-proxima font-normal rounded-[5px] text-light-gray">BEST SELLER</h6>
-                        <div className="flex flex-col border-3 border-light-background rounded-[5px] ">
-                            <img src={ProductImg} alt="ProductImg" />
-                            <div className="flex mt-[53px] mb-[34px] flex-col gap-3 justify-center ">
-                                <div className="flex gap-[5px] justify-center items-center">
-                                    <img className='w-3' src={star} alt="star" />
-                                    <img className='w-3' src={star} alt="star" />
-                                    <img className='w-3' src={star} alt="star" />
-                                    <img className='w-3' src={star} alt="star" />
-                                    <img className='w-3' src={star1} alt="star1" />
-                                </div>
-                                <div className="flex items-center justify-center gap-3">
-                                    <p className="text-base font-proxima font-normal text-secondary-red ">$499</p>
-                                    <p className="text-base font-proxima font-normal text-light-gray "><del>$599</del></p>
-                                </div>
 
+
+                    {/* <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        loop={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper"
+                    > */}
+                        {/* <SwiperSlide> */}
+                            <div className="flex flex-col max-w-[287px] w-full gap-[35px]">
+                            <h6 className="text-lg font-proxima font-normal rounded-[5px] text-light-gray">BEST SELLER</h6>
+                            <div className="flex flex-col border-3 border-light-background rounded-[5px] ">
+                                <img src={ProductImg} alt="ProductImg" />
+                                <div className="flex mt-[53px] mb-[34px] flex-col gap-3 justify-center ">
+                                    <div className="flex gap-[5px] justify-center items-center">
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star1} alt="star1" />
+                                    </div>
+                                    <div className="flex items-center justify-center gap-3">
+                                        <p className="text-base font-proxima font-normal text-secondary-red ">$499</p>
+                                        <p className="text-base font-proxima font-normal text-light-gray "><del>$599</del></p>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        {/* </SwiperSlide> */}
+                        {/* <SwiperSlide>
+                            <div className="flex flex-col max-w-[287px] w-full gap-[35px]">
+                            <h6 className="text-lg font-proxima font-normal rounded-[5px] text-light-gray">BEST SELLER</h6>
+                            <div className="flex flex-col border-3 border-light-background rounded-[5px] ">
+                                <img src={ProductImg} alt="ProductImg" />
+                                <div className="flex mt-[53px] mb-[34px] flex-col gap-3 justify-center ">
+                                    <div className="flex gap-[5px] justify-center items-center">
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star} alt="star" />
+                                        <img className='w-3' src={star1} alt="star1" />
+                                    </div>
+                                    <div className="flex items-center justify-center gap-3">
+                                        <p className="text-base font-proxima font-normal text-secondary-red ">$499</p>
+                                        <p className="text-base font-proxima font-normal text-light-gray "><del>$599</del></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </SwiperSlide> */}
+
+                    {/* </Swiper> */}
 
                 </div>
             </div >

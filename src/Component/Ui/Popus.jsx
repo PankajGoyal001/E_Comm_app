@@ -4,7 +4,7 @@ import PopusData from "../../json/Popus.json";
 const Popus = () => {
     return (
         <>
-            <div className="w-[1029px] border-t border-[#F1F3F4] pt-[37px] pb-6 pl-[84px] pr-8 bg-white top-12 -left-60 absolute">
+            <div className="w-[1029px] border-t z-50 border-[#F1F3F4] pt-[37px] pb-6 pl-[84px] pr-8 bg-white top-12 -left-60 absolute">
                 <div className="flex gap-[59px]">
                     <div className="flex flex-col gap-[13px]">
                         {

@@ -1,0 +1,22 @@
+[
+    {
+        "images":"shirt.svg",
+        "title":"Man Shirt"
+    },
+    {
+        "images":"dress.svg",
+        "title":"Dress"
+    },
+    {
+        "images":"manBags.svg",
+        "title":"Man Work Equipment"
+    },
+    {
+        "images":"womanBags.svg",
+        "title":"Woman Bag"
+    },
+    {
+        "images":"MenShoes.svg",
+        "title":"Man Shoes"
+    }
+]
