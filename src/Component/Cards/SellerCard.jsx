@@ -5,14 +5,21 @@ const SellerCard = ({ image, title, star, lightStar, price, deletedata, offer, h
         <>
             <div className="flex flex-col border-[3px] rounded-[8px] border-[#F6F7F8] sm:gap-[10px] gap-2 p-4 sm:p-0 items-center">
                 <div className="relative cursor-pointer group ">
-                    <img className=' hover:blur-xs' src={`src/assets/Images/${image}`} alt="images" />
-                    {
-                        hot !== undefined && (<> <p className='absolute bg-secondary-red pt-[5px] pb-1.5 pl-[13px] pr-[14px] rounded-[3px] text-white text-lg  font-proxima font-normal left-0 top-0'>{hot}</p></>)
-                    }
-                    <div className="flex absolute group-hover:w-[200px] transition-all duration-200 group-hover:z-50 group-hover:opacity-100 -z-50 opacity-0  w-0  top-[109px] left-[82px]  gap-[10px]">
-                        <img className='border-2 bg-white  border-[#33A0FF] p-4 rounded-full' src={`src/assets/svg/${heart}`} alt="heart" />
-                        <img className='border-2 bg-white  border-[#33A0FF] p-4 rounded-full' src={`src/assets/svg/${shop}`} alt="shop" />
+                    <img className="z-30" src={`src/assets/Images/${image}`} alt="images" />
+
+                    {hot !== undefined && (
+                        <p className="absolute bg-secondary-red pt-[5px] pb-1.5 pl-[13px] pr-[14px] rounded-[3px] text-white text-lg font-proxima font-normal left-0 top-0">
+                            {hot}
+                        </p>
+                    )}
+
+                    <div className='hover:bg-[#2d95704d] bg-opacity-[0.6] absolute top-0 left-0 right-0 bottom-0'>
+                        <div className="flex absolute justify-center left-1/2 top-1/2 transform -translate-x-1/2  group-hover:w-[200px] group-hover:opacity-100 opacity-0 w-0 gap-[10px]">
+                            <img className="border-2 bg-white border-[#33A0FF] p-4 rounded-full" src={`src/assets/svg/${heart}`} alt="heart" />
+                            <img className="border-2 bg-white border-[#33A0FF] p-4 rounded-full" src={`src/assets/svg/${shop}`} alt="shop" />
+                        </div>
                     </div>
+
                 </div>
                 <div className="flex flex-col gap-1.5 sm:pb-[25px] sm:items-center">
                     <h5 className="sm:text-lg text-xs leading-[150%] tracking-[0.5px] font-bold font-poppins text-netural-blue">{title}</h5>

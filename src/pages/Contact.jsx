@@ -16,7 +16,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex gap-[50px] my-[134px] shadow-2xl items-center">
+        <div className="flex gap-[50px] my-[134px] shadow-md items-center">
           <div className="max-w-[626px] w-full relative h-[715px] bg-primary-blue">
             <img className='absolute top-[21px] right-[100px]' src={ContactImg} alt="ContactImg" />
             <span className='max-w-[130px] w-full h-[133px] rounded-full bg-primary-blue top-[291px] -right-5 absolute'></span>
@@ -30,15 +30,15 @@ const Contact = () => {
           <div className="flex flex-col w-full gap-[22px]">
             <div className="flex flex-col max-w-[510px] w-full gap-[7px]">
               <label htmlFor="">Fullname</label>
-              <input className='border w-full pt-[25px] pb-5 pl-7 rounded-r-[3px]' type="text" />
+              <input className='border w-full outline-[#33A0FF] pt-[25px] border-[#969393] rounded-r-[3px] pb-5 pl-7' placeholder='James Doe' type="text" />
             </div>
             <div className="flex flex-col max-w-[510px] w-full gap-[7px]">
               <label htmlFor="">Email</label>
-              <input className='border w-full pt-[25px] pb-5 pl-7 rounded-r-[3px]' type="text" />
+              <input className='border w-full pt-[25px] outline-[#33A0FF] border-[#969393] rounded-r-[3px] pb-5 pl-7' placeholder='jamesdoe@gmail.com' type="text" />
             </div>
             <div className="flex flex-col max-w-[510px] w-full gap-[7px]">
               <label htmlFor="">Message</label>
-              <input className='border w-full pt-[25px] pb-5 pl-7 rounded-r-[3px]' type="text" />
+              <textarea className='border w-full pt-[40px] outline-[#33A0FF] border-[#969393] rounded-r-[3px] pb-[165px] pl-7' placeholder='Type your message' type="text" />
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 {
   "hotdeal": [
-    { "heading": "Hot Deals" },
     {
       "text": "Nike",
       "count": "2"
@@ -31,7 +30,6 @@
     }
   ],
   "Colors": [
-    { "heading": "COLOR" },
 
     {
       "Color": "#006CFF"

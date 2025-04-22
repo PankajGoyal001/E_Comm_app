@@ -54,13 +54,13 @@ const Header = () => {
 
         {/*  logo ..... */}
         <div className="flex justify-between gap-[50px] w-full md:py-0 py-[10px] items-center">
-          <div className={` gap-1.5 flex md:my-[26px] max-w-[134px] w-full items-center ${Click1 ? "hidden " : "block"} `}>
+          <div className={` gap-1.5 flex md:my-[26px] max-w-[134px] w-full items-center`}>
             <img src={logo} alt="logo" />
             <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-primary-dark'>E-Comm</h6>
           </div>
 
           {/* menubar ...... */}
-          <div className={`md:flex hidden  justify-between relative items-center ${Click1 ? "w-0 " : "max-w-[815.49px]  w-full"}`}>
+          <div className='hidden md:flex max-w-[815px] w-full justify-between' >
             {
               menuData.map((item, index) => (
                 <NavLink key={index} to={item.path}>
@@ -70,14 +70,20 @@ const Header = () => {
                 </NavLink>
               ))
             }
-
-            {Click === 0 && <Popus />}
           </div>
 
-          {/* sidebar ...... */}
-          {
-            (<>
-              <div className={`flex gap-1.5 md:hidden md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-10 translate-0 delay-500  " : " w-0 -z-50 translate-x-[100px] "} items-center`}>
+          <button className="grid gap-1.5 md:hidden relative cursor-pointer" onClick={() => setClick1(!Click1)}>
+            <p className={`${Click1 ? "-rotate-45 absolute  z-50 " : ""} w-8 border-2 duration-500`} ></p>
+            <span className={`${Click1 ? "border-transparent" : ""} w-8 border-2 `} ></span>
+            <p className={`${Click1 ? "rotate-45 absolute  z-50" : ""} w-8 border-2 duration-500`}></p>
+          </button>
+        </div>
+
+        {/* sidebar ...... */}
+        {
+          (<>
+            <div className='md:hidden'>
+              <div className={`flex gap-1.5 md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-10 translate-0 delay-500  " : " w-0 -z-50 translate-x-[100px] "} items-center`}>
                 <img src={logo} alt="logo" />
                 <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-white'>E-Comm</h6>
               </div>
@@ -89,7 +95,7 @@ const Header = () => {
                 <ul className={`flex flex-col gap-5`}>
                   {Click1 &&
                     menuData.map((item, index) => (
-                      <NavLink onClick={()=> setClick1(false)} key={index} to={item.path}>
+                      <NavLink onClick={() => setClick1(false)} key={index} to={item.path}>
                         <button onMouseMove={() => setClick(index)} onMouseOut={() => setClick()}>
                           <li className="text-xl font-medium font-poppins tracking-normal hover:cursor-pointer">{item.menu}</li>
                         </button>
@@ -99,14 +105,10 @@ const Header = () => {
                 </ul>
               </div>
               <div className={`max-h-1vh md:hidden h-full ${Click1 ? "w-full" : "w-0"} transition-all duration-700 top-0 right-0 absolute bg-gray-400  `}></div>
-            </>)
-          }
-          <button className="grid gap-1.5 md:hidden relative cursor-pointer" onClick={() => setClick1(!Click1)}>
-            <p className={`${Click1 ? "-rotate-45 absolute  z-50 " : ""} w-8 border-2 duration-500`} ></p>
-            <span className={`${Click1 ? "border-transparent" : ""} w-8 border-2 `} ></span>
-            <p className={`${Click1 ? "rotate-45 absolute  z-50" : ""} w-8 border-2 duration-500`}></p>
-          </button>
-        </div>
+            </div>
+          </>)
+        }
+
       </div>
     </>
   )

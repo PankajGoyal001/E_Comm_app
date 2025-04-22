@@ -16,6 +16,7 @@
   --color-light-blue: #BCDDFE;
   --color-light-background: #F6F7F8;
   --color-primary-border: #F1F3F4;
+  --color-netural-light: #EBF0FF;
 
 
 }
@@ -43,5 +44,3 @@
     @apply w-[100%]
   }
 }
-
-
