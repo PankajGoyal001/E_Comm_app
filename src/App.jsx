@@ -10,6 +10,7 @@ import ScrollToTop from './Component/Common/Toptoscroll'
 import SkeletonCard from './Skeleton/skeleton.jsx'
 import { useEffect, useState } from 'react'
 import Hotdeals from './pages/Hotdeals.jsx'
+import Cart from './pages/Cart.jsx'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/bags' element={<Bags />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/hotdeals' element={<Hotdeals />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>

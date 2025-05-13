@@ -6,7 +6,7 @@ import Mark from "../../assets/svg/Mark.svg";
 import search from "../../assets/svg/search-icon.svg";
 import logo from "../../assets/Images/logo.png";
 import menuData from "../../json/Menu.json";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Popus from '../Ui/Popus';
 
 
@@ -54,10 +54,12 @@ const Header = () => {
 
         {/*  logo ..... */}
         <div className="flex justify-between gap-[50px] w-full md:py-0 py-[10px] items-center">
-          <div className={` gap-1.5 flex md:my-[26px] max-w-[134px] w-full items-center`}>
-            <img src={logo} alt="logo" />
-            <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-primary-dark'>E-Comm</h6>
-          </div>
+          <Link to={"/"} >
+            <div className={` gap-1.5 flex md:my-[26px] max-w-[134px] w-full items-center`}>
+              <img src={logo} alt="logo" />
+              <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-primary-dark'>E-Comm</h6>
+            </div>
+          </Link>
 
           {/* menubar ...... */}
           <div className='hidden md:flex max-w-[815px] w-full justify-between' >
@@ -109,7 +111,7 @@ const Header = () => {
           </>)
         }
 
-      </div>
+      </div >
     </>
   )
 }

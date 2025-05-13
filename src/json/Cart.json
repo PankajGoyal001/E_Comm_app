@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "Images": "img1.png",
+      "Title": "Nike Airmax 270 react",
+      "Price": 499,
+      "Unitprice": "$499",
+      "subtract":"Subtract.svg",
+      "Add":"Addition.svg",
+      "del":"del.svg"
+    },
+    {
+      "Images": "img2.png",
+      "Title": "Nike Airmax 270 react",
+      "Price": 499,
+      "Unitprice": "$499",
+      "subtract":"Subtract.svg",
+      "Add":"Addition.svg",
+      "del":"del.svg"
+    }
+  ],
+  "check":[
+    {
+        "title":"Subtotal",
+        "data":"$998"
+    },
+    {
+        "title":"Shipping fee",
+        "data":"$20"
+    },
+    {
+        "title":"Coupon",
+        "data":"No"
+    },
+    {
+        "total":"TOTAL",
+        "price":"$1018"
+    }
+  ]
+}

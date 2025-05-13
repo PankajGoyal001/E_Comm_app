@@ -26,7 +26,7 @@ const BestSeller = ({ data, VARIENT, Title }) => {
                                 </>) 
                             }
                         </div>
-                        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-[20px]">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5">
                             {
                                 data.map((item, index) => (
                                     <SellerCard key={index}

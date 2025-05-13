@@ -15,6 +15,11 @@ const Shoes = () => {
                 detail={item.detail}
                 shop={item.shop}
                 images={item.image}
+                classname={" max-w-[592px] py-[163px] w-full "}
+                titleText={"text-[55px] pb-[23px]"}
+                detailText={"text-2xl pb-3"}
+                imageText={"absolute right-[-120px]  top-[-95px]"}
+                shopText={"pb-1  text-xl"}
               />
             ))
           }

@@ -1,5 +1,5 @@
 import React, { Fragment, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import ProductImg from "../../assets/Images/ProductImg.png";
 import star from "../../assets/svg/star.svg";
 import star1 from "../../assets/svg/star1.svg";
@@ -27,7 +27,7 @@ const ProductBanner = () => {
         <>
             <div className="container">
                 {/* header ....... */}
-                <div className="flex mt-[30px] py-3.5 bg-light-background justify-center">
+                <div className="sm:flex hidden mt-[30px] py-3.5 bg-light-background justify-center">
                     <div className="flex items-center gap-[9px]">
                         <Link to={"/"}>
                             <h3 className='text-lg font-normal leading-[100%] font-proxima text-skyblue'>Home</h3>
@@ -40,15 +40,15 @@ const ProductBanner = () => {
                 </div>
 
                 {/* banner ............ */}
-                <div className="flex justify-between gap-8 pt-[42px] items-start">
-                    <div className="flex flex-col gap-12 ">
-                        <div className="lg:flex-row flex flex-col gap-[35px]">
-                            <div className="flex max-w-[390px] w-full flex-col ">
-                                <img className='object-contain max-w-[375px] bg-[#f6f6f6] w-full h-[272px] ' src={`src/assets/Images/${image}`} alt={image} />
-                                <div className="flex md:pt-[134px] sm:pt-[90px] pt-5 gap-[15px]">
+                <div className="lg:flex justify-between gap-8 pt-[42px] items-start">
+                    <div className="flex flex-col w-full gap-12 ">
+                        <div className="md:flex-row flex flex-col gap-[35px] justify-between">
+                            <div className="flex w-full flex-col ">
+                                <img className='object-contain md:max-w-[375px] bg-[#f6f6f6] w-full md:h-[272px] ' src={`src/assets/Images/${image}`} alt={image} />
+                                <div className="flex md:max-w-[388px] w-full md:pt-[134px] sm:pt-[90px] pt-5 gap-3 sm:gap-5 md:gap-2 lg:gap-[15px]">
                                     {
                                         ProductData.map((item, index) => (
-                                            <img className='max-w-[85px] w-full' onClick={() => setimage(item.images)} key={index} src={`src/assets/Images/${item.images}`} alt="images" />
+                                            <img className='lg:max-w-[85px] max-w-[72px] sm:max-w-[85px] md:max-w-16 w-full' onClick={() => setimage(item.images)} key={index} src={`src/assets/Images/${item.images}`} alt="images" />
 
                                         ))
                                     }
@@ -56,7 +56,7 @@ const ProductBanner = () => {
                             </div>
 
                             {/* Details.... */}
-                            <div className="flex flex-col">
+                            <div className="flex w-full flex-col">
                                 <h3 className='text-2xl hidden sm:block font-medium font-poppins text-primary-dark'>Nike Airmax 270 React</h3>
                                 <div className="flex sm:hidden justify-between">
                                     <h3 className='text-xl leading-[150%] tracking-[0.5px] font-poppins font-bold '>Nike Air Zoom Pegasus 36 Miami</h3>
@@ -94,9 +94,9 @@ const ProductBanner = () => {
                                 </div>
                                 <span className='border-b hidden sm:block  w-full border-light-background mt-[22px] mb-5'></span>
                                 {/*  */}
-                                <div className="flex overflow-scroll pt-6 sm:hidden flex-col gap-3">
+                                <div className="flex pt-6 sm:hidden flex-col gap-3">
                                     <h5 className=''>Select Size</h5>
-                                    <div className="flex overflow-scroll  gap-4 ">
+                                    <div className="flex overflow-scroll gap-4 ">
                                         {["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"].map((item, index) => (
                                             <div key={index} className="flex border border-netural-light rounded-[50%] w-12 h-12 ">
                                                 <p className="m-auto text-sm leading-[150%] font-bold fontpop">{item}</p>
@@ -155,7 +155,7 @@ const ProductBanner = () => {
                                     </select>
                                 </div>
                                 <span className='border-b hidden sm:block w-full border-light-background mt-[21px] mb-5'></span>
-                                <div className="sm:flex hidden justify-between ">
+                                <div className="sm:flex flex-col lg:flex-row gap-6 hidden lg:justify-between ">
                                     <div className="max-w-[123px] rounded-[5px] bg-light-background flex justify-between px-[18px] py-[15px] w-full items-center ">
                                         <button className='cursor-pointer text-skyblue' onClick={() => { if (count > 1) { setcount(count - 1); } }}>-</button>
                                         <p>{count}</p>
@@ -164,7 +164,7 @@ const ProductBanner = () => {
                                     <div className="flex gap-[17px]">
                                         <div className="flex gap-[15px] pt-[14px] pl-[21px] pr-4 pb-4 rounded-[5px] bg-[#ebf6ff]  items-center">
                                             <img src={cart_2} alt="cart_2" />
-                                            <p className="text-skyblue text-base font-normal font-proxima">Add To Cart</p>
+                                            <p className="text-skyblue text-nowrap text-base font-normal font-proxima">Add To Cart</p>
                                         </div>
                                         <img src={heart_2} alt="heart_2" />
                                     </div>

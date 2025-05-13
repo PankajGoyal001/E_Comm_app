@@ -29,6 +29,24 @@
       "count": "95"
     }
   ],
+  "Brand": [
+    {
+      "text": "Nike",
+      "count": "99"
+    },
+    {
+      "text": "Airmax",
+      "count": "99"
+    },
+    {
+      "text": "Adidas",
+      "count": "99"
+    },
+    {
+      "text": "Siemens",
+      "count": "99"
+    }
+  ],
   "Colors": [
 
     {
@@ -48,6 +66,17 @@
     },
     {
       "Color": "#EFDFDF"
+    }
+  ],
+  "types":[
+    {
+      "title":"Items",
+      "sort":"Sort By",
+      "name":"Name",
+      "image":"arrow_down.svg",
+      "show":"Show",
+      "Doted":"Doted_icon.svg",
+      "bar":"SideBar.svg"
     }
   ]
 }
