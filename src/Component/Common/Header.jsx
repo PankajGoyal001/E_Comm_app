@@ -85,7 +85,7 @@ const Header = () => {
         {
           (<>
             <div className='md:hidden'>
-              <div className={`flex gap-1.5 md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-10 translate-0 delay-500  " : " w-0 -z-50 translate-x-[100px] "} items-center`}>
+              <div className={`flex gap-1.5 md:my-[26px] transition-all duration-300 ${Click1 ? "w-full z-20 translate-0 delay-500  " : " w-0 -z-50 translate-x-[100px] "} items-center`}>
                 <img src={logo} alt="logo" />
                 <h6 className='text-lg leading-[100%] tracking-normal font-bold font-poppins text-white'>E-Comm</h6>
               </div>

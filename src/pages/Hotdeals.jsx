@@ -142,7 +142,7 @@ const Hotdeals = () => {
                                         classname={" max-w-[350px] py-[58px_55px] ml-[110px] w-full "}
                                         titleText={"text-[30px] pb-3"}
                                         detailText={"text-sm pb-6"}
-                                        imageText={"absolute right-[113px] max-w-[397px] w-full bottom-[35px]"}
+                                        imageText={"absolute xl:right-[113px] right-[50px] max-w-[397px] w-full bottom-[35px]"}
                                         shopText={"pb-[3px]  text-xl"}
                                     />
                                 ))
@@ -155,7 +155,7 @@ const Hotdeals = () => {
                                 hotDealData.types.map((item, index) => (
                                     <div key={index}>
                                         <Link to={item.path}>
-                                            <div className="flex  w-[961.50px]">
+                                            <div className="flex ">
                                                 <div className="flex gap-12 pt-[11px] pb-[9px] pl-[13px] items-center">
                                                     <div className="flex gap-1.5">
                                                         <h4 className='font-proxima font-normal text-base'>{bestselling.Data1.length}</h4>
@@ -178,7 +178,7 @@ const Hotdeals = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="flex w-full justify-end">
+                                                <div className="flex xl:w-[425px] w-[300px] justify-end">
                                                     <button onClick={grid}>
                                                         <img className='p-[19px_17px] cursor-pointer' src={`src/assets/svg/${item.Doted}`} alt="Doted" />
                                                     </button>

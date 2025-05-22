@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import CartData from "../json/Cart.json";
+import { Link, useLocation } from 'react-router-dom'
+import CartData from "../../json/Cart.json";
+import Popupcart from '../Cards/Popupcart';
 
 const Cart = () => {
+    const [isCheck, setCheck] = useState(false)
     const [count, setCount] = useState(1)
     const [iscount, setisCount] = useState(1)
     const [remove, setRemove] = useState(false)
@@ -11,7 +13,7 @@ const Cart = () => {
             <div className="">
                 <div className="container">
                     {/* header ....... */}
-                    <div className="sm:flex hidden my-[47px] py-3.5 bg-light-background justify-center">
+                    <div className="sm:flex hidden md:my-[47px] my-[35px] py-3.5 bg-light-background justify-center">
                         <div className="flex items-center gap-[9px]">
                             <Link to={"/"}>
                                 <h3 className='text-lg font-normal leading-[100%] font-proxima text-skyblue'>Home</h3>
@@ -24,7 +26,7 @@ const Cart = () => {
                     </div>
 
                     {/* Banner */}
-                    <div className="flex items-center pb-[23px] border-b-2 border-light-background justify-between ">
+                    <div className="md:flex hidden items-center pb-[23px] border-b-2 border-light-background justify-between ">
                         <h5 className='pl-[50px] text-xl font-medium font-poppins text-primary-dark'>PRODUCT</h5>
                         <div className="flex justify-between max-w-[438px] w-full">
                             <h6 className='text-xl font-medium font-poppins text-primary-dark'>PRICE</h6>
@@ -36,17 +38,17 @@ const Cart = () => {
                     <div className="flex flex-col ">
                         {
                             CartData.main.map((item, index) => (
-                                <div key={index} className={`flex pb-[55px] justify-between items-center pt-[63px] border-b-2 border-light-background ${remove ? "hidden" : ""}`}>
-                                    <div className="flex items-center relative group gap-7">
-                                        <img className='max-w-[138px]  rounded w-full' src={`src/assets/Images/${item.Images}`} alt="images" />
+                                <div key={index} className={`md:flex-row flex gap-5 md:pb-[55px] justify-between md:items-center md:pt-[63px] py-10 border-b-2 border-light-background ${remove ? "hidden" : ""}`}>
+                                    <div className="md:flex-row flex flex-col items-center relative group gap-5 sm:gap-7">
+                                        <img className='max-w-[138px] -z-10 rounded w-full' src={`src/assets/Images/${item.Images}`} alt="images" />
                                         <img onClick={() => setRemove(!remove)} className='absolute -top-3 -left-3 hidden cursor-pointer group-hover:block' src={`src/assets/svg/${item.del}`} alt="" />
-                                        <p className="text-lg font-poppins font-normal">{item.Title}</p>
+                                        <p className="sm:text-lg text-base -z-10 font-poppins text-nowrap font-normal">{item.Title}</p>
                                     </div>
-                                    <div className="flex items-center justify-between max-w-[438px] w-full">
+                                    <div className="md:flex-row flex flex-col-reverse items-center justify-between lg:max-w-[438px] max-w-[300px] w-full">
                                         {
                                             index === 0 ? (<>
                                                 <h6 className={`text-xl font-medium font-poppins text-primary-dark ${count}`}>{item.Price * count}</h6>
-                                                <div className="flex cursor-pointer justify-between bg-light-background rounded py-3 px-[18px] max-w-[128px] w-full items-center">
+                                                <div className="flex cursor-pointer justify-between bg-light-background rounded sm:py-3 py-1.5 sm:px-[18px] px-3 max-w-[128px] w-full items-center">
                                                     <p onClick={() => setCount(count > 1 ? count - 1 : 1)} > <img src={`src/assets/svg/${item.subtract}`} alt="subtract" /></p>
                                                     <p className="text-lg font-normal font-proxima text-primary">{count}</p>
                                                     <p onClick={() => setCount(count < 20 ? count + 1 : 20)}> <img src={`src/assets/svg/${item.Add}`} alt="" /></p>
@@ -54,7 +56,7 @@ const Cart = () => {
                                             </>) : (<>
                                                 <h6 className={`text-xl font-medium font-poppins text-primary-dark ${count}`}>{item.Price * iscount}</h6>
 
-                                                <div className="flex cursor-pointer justify-between bg-light-background rounded py-3 px-[18px] max-w-[128px] w-full items-center">
+                                                <div className="flex cursor-pointer justify-between bg-light-background rounded sm:py-3 py-1.5 sm:px-[18px] px-3 max-w-[128px] w-full items-center">
                                                     <p onClick={() => setisCount(iscount > 1 ? iscount - 1 : 1)} > <img src={`src/assets/svg/${item.subtract}`} alt="subtract" /></p>
                                                     <p className="text-lg font-normal font-proxima text-primary">{iscount}</p>
                                                     <p onClick={() => setisCount(iscount < 20 ? iscount + 1 : 20)} > <img src={`src/assets/svg/${item.Add}`} alt="" /></p>
@@ -69,12 +71,12 @@ const Cart = () => {
                         }
                     </div>
 
-                    <div className="flex justify-between mt-[90px] mb-[156px]">
-                        <div className="flex max-w-[370px] w-full h-[60px]">
+                    <div className="md:flex-row flex flex-col-reverse gap-10 justify-between md:mt-[90px] mt-[70px] md:mb-[156px] mb-[120px] items-center">
+                        <div className="flex md:max-w-[370px] w-full h-[60px]">
                             <input className='w-full py-[19px_17px] pl-5 outline-none border-2 border-primary-border' type="text" placeholder='Voucher code' />
                             <button className='px-[21px] py-[18px_14px] bg-skyblue rounded-r text-white text-lg font-medium font-poppins'>Redeem</button>
                         </div>
-                        <div className="max-w-[377px] w-full flex flex-col gap-6">
+                        <div className="lg:max-w-[377px]  md:max-w-[277px] w-full flex flex-col gap-6">
                             {
                                 CartData.check.map((item, index) => (
                                     <div key={index}>
@@ -85,11 +87,20 @@ const Cart = () => {
                                         <div className="flex pt-1 justify-between ">
                                             <h5 className='text-3xl font-poppins font-medium text-primary-dark'>{item.total}</h5>
                                             <p className="text-3xl font-poppins font-medium text-primary-dark">{item.price}</p>
-                                        </div> 
+                                        </div>
                                     </div>
                                 ))
                             }
-                            <button className='py-4 transition-transform hover:scale-[0.9] ease-in-out duration-500 cursor-pointer bg-skyblue rounded  text-white text-lg font-medium font-poppins'>Check out</button>
+                            <button  onClick={() => setCheck(true)} className='py-4 transition-transform hover:scale-[0.9] ease-in-out duration-500 cursor-pointer bg-skyblue rounded  text-white text-lg font-medium font-poppins'>Check out</button>
+
+                             {isCheck && (
+                    <>
+                      <div onClick={()=>setCheck(false)}  className="fixed inset-0  bg-[#2222224D]  z-40"></div>
+                      <div className="fixed  inset-0 flex   m-auto  justify-center items-center z-50">
+                        <Popupcart varient={true} data={()=>setCheck(false)}/>
+                      </div>
+                    </>
+                  )}
                         </div>
                     </div>
                 </div>
@@ -99,3 +110,20 @@ const Cart = () => {
 }
 
 export default Cart
+
+
+// import { useLocation } from 'react-router-dom';
+
+// function cart() {
+//   const location = useLocation();
+//   console.log(location)
+  
+//   return (
+//       <div>
+//       <h1>cart Page</h1>
+//       <p>Current path: {location.pathname}</p>
+//     </div>
+//   );
+// }
+
+// export default cart

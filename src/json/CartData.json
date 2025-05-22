@@ -1,0 +1,17 @@
+{
+    "bankdetal":[
+        {
+            "img":"../../../public/svg/CreditCard.svg",
+            "title":"Credit Card Or Debit"
+        },
+        {
+            "img":"../../../public/svg/Paypalblue.svg",
+            "title":"Paypal"
+        },
+        {
+            "img":"../../../public/svg/Bank.svg",
+            "title":"Bank Transfer"
+        }
+    ]
+
+}

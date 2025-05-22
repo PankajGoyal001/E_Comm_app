@@ -36,5 +36,19 @@
         "total":"TOTAL",
         "price":"$1018"
     }
-  ]
+  ],
+  "bankdetal":[
+        {
+            "img":"src/assets/svg/CreditCard.svg",
+            "title":"Credit Card Or Debit"
+        },
+        {
+            "img":"src/assets/svg/Paypalblue.svg",
+            "title":"Paypal"
+        },
+        {
+            "img":"src/assets/svg/Bank.svg",
+            "title":"Bank Transfer"
+        }
+    ]
 }

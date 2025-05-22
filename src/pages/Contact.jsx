@@ -55,3 +55,23 @@ const Contact = () => {
 }
 
 export default Contact
+
+
+// import { useNavigate } from 'react-router-dom';
+
+// function Contact() {
+//   const navigate = useNavigate();
+
+//   const goTocart = () => {
+//     navigate('/cart');
+//   };
+
+//   return (
+//     <div>
+//       <h1>Home Page</h1>
+//       <button onClick={goTocart}>Go to cart Page</button>
+//     </div>
+//   );
+// }
+
+// export default Contact
